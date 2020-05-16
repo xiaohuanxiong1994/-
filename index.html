@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>精灵合成模拟</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="change.js"></script>
+</head>
+<body>
+	<div class="all">
+		<h1>精灵属性加成</h1>
+		<div class="all-box">
+			<div class="all-box-item all-box-item-left">
+				<ul>
+					<li>力量：<span id="att1">0</span></li>
+					<li>耐力：<span id="att2">0</span></li>
+					<li>体力：<span id="att3">0</span></li>
+					<li>敏捷：<span id="att4">0</span></li>
+					<li>魔力：<span id="att5">0</span></li>
+				</ul>
+			</div>
+			<div class="all-box-item all-box-item-right">
+				<p id="df" style="display: none;">单法</p>
+				<p id="qf" style="display: none;">群法</p>
+				<p id="sjn" style="display: none;">三技能</p>
+				<p id="sjn1" style="display: none;">精灵之悟</p>
+				<p id="sjn2" style="display: none;">精灵之怒</p>
+				<p id="sjn3" style="display: none;">精灵之舞</p>
+				<p id="sjn4" style="display: none;">精灵之盾</p>
+				<p id="sjn5" style="display: none;">精灵之歌</p>
+				<p id="sjn6" style="display: none;">精灵之慑</p>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="stone">
+			<ul>
+				<li>圣兽石</li>
+				<li><span>XX</span>+4</li>
+				<li><span>XX</span>+1</li>
+				<li>附加+<span>0</span></li>
+			</ul>
+			<button id="resetone" class="button">
+				重置
+			</button>
+		</div>
+		<div class="stone">
+			<ul>
+				<li>圣兽石</li>
+				<li><span>XX</span>+4</li>
+				<li><span>XX</span>+1</li>
+				<li>附加+<span>0</span></li>
+			</ul>
+			<button id="resettwo" class="button">
+				重置
+			</button>
+		</div>
+		<div class="stone">
+			<ul>
+				<li>圣兽石</li>
+				<li><span>XX</span>+4</li>
+				<li><span>XX</span>+1</li>
+				<li>附加+<span>0</span></li>
+			</ul>
+			<button id="resetthree" class="button">
+				重置
+			</button>
+		</div>
+		<div class="stone">
+			<ul>
+				<li>无极石</li>
+				<li>力量+<span>0</span>__附加+<span>0</span></li>
+				<li>耐力+<span>0</span>__附加+<span>0</span></li>
+				<li>体力+<span>0</span>__附加+<span>0</span></li>
+				<li>敏捷+<span>0</span>__附加+<span>0</span></li>
+				<li>魔力+<span>0</span>__附加+<span>0</span></li>
+			</ul>
+			<button id="resetfour" class="button">
+				重置
+			</button>
+		</div>
+		<div class="stone">
+			<ul>
+				<li>无极石</li>
+				<li>力量+<span>0</span>__附加+<span>0</span></li>
+				<li>耐力+<span>0</span>__附加+<span>0</span></li>
+				<li>体力+<span>0</span>__附加+<span>0</span></li>
+				<li>敏捷+<span>0</span>__附加+<span>0</span></li>
+				<li>魔力+<span>0</span>__附加+<span>0</span></li>
+			</ul>
+			<button id="resetfive" class="button">
+				重置
+			</button>
+		</div>
+	</div>
+	<button id="ronghe" class="ronghe">合成</button>
+	<button id="res" class="ronghe res">重置所有</button>
+	<div class="footer">
+		<h1>副精灵</h1>
+		<div id="stone1" class="stone">
+			<select class="select1">
+				<option value="1">力量</option>
+				<option value="2">耐力</option>
+				<option value="3">体力</option>
+				<option value="4">敏捷</option>
+				<option value="5">魔力</option>
+			</select>
+		</div>
+		<div id="stone2" class="stone">
+			<select class="select1">
+				<option value="1">力量</option>
+				<option value="2">耐力</option>
+				<option value="3">体力</option>
+				<option value="4">敏捷</option>
+				<option value="5">魔力</option>
+			</select>
+		</div>			
+		<div id="stone3" class="stone">
+			<select class="select1">
+				<option value="1">力量</option>
+				<option value="2">耐力</option>
+				<option value="3">体力</option>
+				<option value="4">敏捷</option>
+				<option value="5">魔力</option>
+			</select>
+		</div>	
+		<div id="stone4" class="stone">
+			<select class="select1">
+				<option value="10">无极石</option>
+				<option value="100">圣兽石</option>
+			</select>
+			<select style="display: none;">
+				<option value="1">力量</option>
+				<option value="2">耐力</option>
+				<option value="3">体力</option>
+				<option value="4">敏捷</option>
+				<option value="5">魔力</option>
+			</select>
+		</div>	
+		<div id="stone5" class="stone">
+			<select class="select1">
+				<option value="10">无极石</option>
+				<option value="100">圣兽石</option>
+			</select>
+			<select style="display: none;">
+				<option value="1">力量</option>
+				<option value="2">耐力</option>
+				<option value="3">体力</option>
+				<option value="4">敏捷</option>
+				<option value="5">魔力</option>
+			</select>
+		</div>	
+	</div>
+</body>
+</html>
